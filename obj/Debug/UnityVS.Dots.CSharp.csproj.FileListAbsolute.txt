@@ -1,0 +1,14 @@
+D:\Work\Dots\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\Work\Dots\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\Work\Dots\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+D:\Work\Dots\obj\Debug\UnityVS.Dots.CSharp.csprojResolveAssemblyReference.cache
+D:\Work\Dots\obj\Debug\Assembly-CSharp.dll
+D:\Work\Dots\obj\Debug\Assembly-CSharp.pdb
+D:\Work\Dots\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
