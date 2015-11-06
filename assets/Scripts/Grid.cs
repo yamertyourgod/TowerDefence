@@ -19,7 +19,6 @@ public class Grid : MonoBehaviour
 	    _instance = this;
         Nodes = new Vector3[RawsCount,ColumnsCount];
         CreateGrid(RawsCount, ColumnsCount, CellXSize, CellZSize, GridCenter);
-	    new Map();
 	}
 	
 	// Update is called once per frame

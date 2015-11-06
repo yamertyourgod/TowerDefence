@@ -236,7 +236,7 @@ public class MapCreatorEditor : Editor
                                 color = Color.red;
                                 break;
                             case GridCell.EnumCellState.Path:
-                                color = Color.cyan;
+                                color = Color.blue;
                                 var controller = FindObjectOfType<GameController>();
                                 if (controller.EnemyPath==null)controller.EnemyPath = new List<Vector3>();
                                 controller.EnemyPath.Add(go.transform.position);

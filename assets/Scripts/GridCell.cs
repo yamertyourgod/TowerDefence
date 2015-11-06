@@ -15,7 +15,7 @@ public class GridCell : MonoBehaviour
     public GameObject GO;
     public EnumCellState State;
     public bool Selected;
-    public Color OriginalColor { get; set; }
+    public Color OriginalColor;
 
     void Start()
     {
@@ -25,10 +25,12 @@ public class GridCell : MonoBehaviour
     {
         var go = Skin.GetPrefab(Skin.GamePrefabs.Cell);
         GO = Instantiate(go, position, go.transform.rotation) as GameObject;
+        State = EnumCellState.Walkable;
         OriginalColor = GO.GetComponent<SpriteRenderer>().color;
         _script = GO.AddComponent<GridCell>();
         _script.GO = GO;
         _script.OriginalColor = OriginalColor;
+        _script.State = State;
 
     }
 

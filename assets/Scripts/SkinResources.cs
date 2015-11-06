@@ -4,6 +4,7 @@ using System.Collections;
 public class SkinResources : MonoBehaviour
 {
     public GameObject CellPrefab;
+    public GameObject ZombiePrefab;
     // Use this for initialization
     private static SkinResources _instance;
     void Start ()
