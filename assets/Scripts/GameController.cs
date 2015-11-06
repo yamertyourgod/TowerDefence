@@ -38,6 +38,11 @@ public class GameController : MonoBehaviour
             var mage = new Mage();
             mage.Summon();
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+           var timer = Timer.AddTimer(2);
+            timer.Done += () => { Debug.Log("Done"); };
+        }
     }
 
     public static GameController GetInstance()

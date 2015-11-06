@@ -11,6 +11,11 @@ public class Minotaur : Enemy {
         Health = 85;
     }
 
+    protected override void GetEffect()
+    {
+        
+    }
+
     protected override void SelfUpdate()
     {
 

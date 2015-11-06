@@ -8,12 +8,14 @@ public abstract class Enemy : MonoBehaviour
     public float Speed;
     public int Mana;
     public GameObject EnemyGO;
+    public bool CanCast;
     private CollisionDetector _coll;
     // Use this for initialization
     public abstract void Move();
     public abstract void Die();
     protected abstract void GetGO();
     protected abstract void GetDamage();
+    protected abstract void GetEffect();
     protected abstract void SelfUpdate();
     protected abstract void Cast(Action action);
 

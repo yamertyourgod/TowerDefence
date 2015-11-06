@@ -11,6 +11,11 @@ public class Zombie : Enemy {
         Health = 20;
     }
 
+    protected override void GetEffect()
+    {
+        
+    }
+
     protected override void SelfUpdate()
     {
 

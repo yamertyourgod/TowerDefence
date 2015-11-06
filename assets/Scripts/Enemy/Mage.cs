@@ -11,6 +11,12 @@ public class Mage : Enemy
         Mana = 50;
         Speed = 20f;
     }
+
+    protected override void GetEffect()
+    {
+        
+    }
+
     protected override void SelfUpdate()
     {
         if (Health < 70)
