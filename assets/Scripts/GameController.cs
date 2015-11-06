@@ -16,17 +16,29 @@ public class GameController : MonoBehaviour
 	    if (_instance != null)
 	        return;
 	    _instance = this;
+        GameObject.Find("Map").SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-	    if (Input.GetKeyDown(KeyCode.S))
+	    if (Input.GetKeyDown(KeyCode.Z))
 	    {
 	        var zombie = new Zombie();
             zombie.Summon();
 	    }
-	}
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            var minotaur = new Minotaur();
+            minotaur.Summon();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            var mage = new Mage();
+            mage.Summon();
+        }
+    }
 
     public static GameController GetInstance()
     {

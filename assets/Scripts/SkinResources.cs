@@ -5,6 +5,9 @@ public class SkinResources : MonoBehaviour
 {
     public GameObject CellPrefab;
     public GameObject ZombiePrefab;
+    public GameObject MinotaurPrefab;
+    public GameObject MagePrefab;
+
     // Use this for initialization
     private static SkinResources _instance;
     void Start ()

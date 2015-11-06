@@ -4,21 +4,23 @@ using System.Collections;
 
 public class CollisionDetector : MonoBehaviour
 {
-    public delegate void HitDelegate(string tag);
+    public delegate void HitDelegate(Collider col);
+    public delegate void UpdateDelegate();
     public event HitDelegate Hit;
+    public event UpdateDelegate UpdateEvent;
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+	{
+	    if (UpdateEvent != null) UpdateEvent();
 	}
 
     void OnTriggerEnter(Collider obj)
     {
-        Debug.Log("Hit " + obj.tag);
-        if (Hit != null) Hit(obj.tag);
+        if (Hit != null) Hit(obj);
     }
 }

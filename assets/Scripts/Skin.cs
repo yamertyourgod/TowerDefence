@@ -15,12 +15,20 @@ public static class Skin
             case GamePrefabs.Zombie:
                 go = SkinResources.ZombiePrefab;
                 break;
+            case GamePrefabs.Minotaur:
+                go = SkinResources.MinotaurPrefab;
+                break;
+            case GamePrefabs.Mage:
+                go = SkinResources.MagePrefab;
+                break;
         }
         return go;
     }
     public enum GamePrefabs
     {
         Cell,
-        Zombie
+        Zombie,
+        Minotaur,
+        Mage
     }
 }

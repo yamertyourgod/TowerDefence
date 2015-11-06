@@ -51,17 +51,17 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -83,6 +83,9 @@
     <Compile Include="assets\Scripts\CameraMovement.cs" />
     <Compile Include="assets\Scripts\CollisionDetector.cs" />
     <Compile Include="assets\Scripts\Enemy.cs" />
+    <Compile Include="assets\Scripts\Enemy\Mage.cs" />
+    <Compile Include="assets\Scripts\Enemy\Minotaur.cs" />
+    <Compile Include="assets\Scripts\Enemy\Zombie.cs" />
     <Compile Include="assets\Scripts\GameController.cs" />
     <Compile Include="assets\Scripts\Grid.cs" />
     <Compile Include="assets\Scripts\GridCell.cs" />
@@ -91,7 +94,7 @@
     <Compile Include="assets\Scripts\MouseCollider.cs" />
     <Compile Include="assets\Scripts\Skin.cs" />
     <Compile Include="assets\Scripts\SkinResources.cs" />
-    <Compile Include="assets\Scripts\Zombie.cs" />
+    <Compile Include="assets\Scripts\iTween.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\standard assets\characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
