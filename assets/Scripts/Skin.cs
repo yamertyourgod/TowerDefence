@@ -39,6 +39,9 @@ public static class Skin
             case GamePrefabs.Splash:
                 go = SkinResources.SplashPrefab;
                 break;
+            case GamePrefabs.Healthbar:
+                go = SkinResources.HealthbarPrefab;
+                break;
         }
         return go;
     }
@@ -53,7 +56,8 @@ public static class Skin
         FrozenTower,
         Bullet,
         Freeze,
-        Splash
+        Splash,
+        Healthbar
 
     }
 }

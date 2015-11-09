@@ -10,7 +10,9 @@ public abstract class Enemy : MonoBehaviour
     public GameObject EnemyGO;
     public bool CanCast = true;
     protected float CoolDown;
+    protected GameObject _healthbar;
     private CollisionDetector _coll;
+
     // Use this for initialization
     public abstract void Move();
     public abstract void Die();
@@ -29,9 +31,11 @@ public abstract class Enemy : MonoBehaviour
         _coll.UpdateEvent += Update;
         EnemyGO.GetComponent<Collider>().isTrigger = true;      
         EnemyGO.tag = "enemy";
+        AddHealthbar();
         //AddTriger();
         Move();
     }
+
 
     protected  void Collide(Collider col)
     {
@@ -51,6 +55,14 @@ public abstract class Enemy : MonoBehaviour
             GetDamage();
         }
     }
+    private void AddHealthbar()
+    {
+        var camera = FindObjectOfType<Camera>();
+        _healthbar = Instantiate(Skin.GetPrefab(Skin.GamePrefabs.Healthbar));
+        _healthbar.transform.position = camera.WorldToScreenPoint(EnemyGO.transform.position);
+        _healthbar.transform.SetParent(FindObjectOfType<GUI>().transform);
+            
+    }
 
     protected void Update()
     {
@@ -60,6 +72,11 @@ public abstract class Enemy : MonoBehaviour
             Die();
         }
         SelfUpdate();
+        if (_healthbar != null)
+        {
+            var camera = FindObjectOfType<Camera>();
+            _healthbar.transform.position = camera.WorldToScreenPoint(EnemyGO.transform.position);
+        }
     }
 
 }

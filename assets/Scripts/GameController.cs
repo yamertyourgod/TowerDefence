@@ -57,6 +57,11 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public static void StartGame()
+    {
+        
+    }
+
     public static GameController GetInstance()
     {
         return _instance;

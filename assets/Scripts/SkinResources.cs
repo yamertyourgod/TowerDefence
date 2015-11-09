@@ -13,6 +13,7 @@ public class SkinResources : MonoBehaviour
     public GameObject BulletPrefab;
     public GameObject FreezePrefab;
     public GameObject SplashPrefab;
+    public GameObject HealthbarPrefab;
 
 
 

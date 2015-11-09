@@ -20,7 +20,8 @@ public abstract class Tower : MonoBehaviour
     public void Build(Vector3 pos)
     {
         GetGO(pos);
-        _coll = TowerGO.AddComponent<CollisionDetector>(); //_coll.gameObject.GetComponent<SphereCollider>().radius = Radius;
+        _coll = TowerGO.AddComponent<CollisionDetector>(); 
+        _coll.gameObject.GetComponent<SphereCollider>().radius = Radius;
         _coll.Hit += Collide;
         _coll.Exit += ExitCollision;
         _coll.UpdateEvent += Update;
