@@ -8,14 +8,15 @@ public abstract class Enemy : MonoBehaviour
     public float Speed;
     public int Mana;
     public GameObject EnemyGO;
-    public bool CanCast;
+    public bool CanCast = true;
+    protected float CoolDown;
     private CollisionDetector _coll;
     // Use this for initialization
     public abstract void Move();
     public abstract void Die();
     protected abstract void GetGO();
     protected abstract void GetDamage();
-    protected abstract void GetEffect();
+    protected abstract void GetEffect(string tag);
     protected abstract void SelfUpdate();
     protected abstract void Cast(Action action);
 
@@ -38,7 +39,16 @@ public abstract class Enemy : MonoBehaviour
         if (col.tag == "bullet")
         {
             GetDamage();
+            Debug.Log("Health = "+Health);
             Destroy(col.gameObject);
+        }
+        if (col.tag == "freeze")
+        {
+            GetEffect(col.tag);
+        }
+        if (col.tag == "splash")
+        {
+            GetDamage();
         }
     }
 
@@ -46,6 +56,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (Health < 1)
         {
+            Debug.Log("Die");
             Die();
         }
         SelfUpdate();

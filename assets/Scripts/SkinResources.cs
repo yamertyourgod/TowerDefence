@@ -7,6 +7,14 @@ public class SkinResources : MonoBehaviour
     public GameObject ZombiePrefab;
     public GameObject MinotaurPrefab;
     public GameObject MagePrefab;
+    public GameObject SimpleTowerPrefab;
+    public GameObject SplashTowerPrefab;
+    public GameObject FrozenTowerPrefab;
+    public GameObject BulletPrefab;
+    public GameObject FreezePrefab;
+    public GameObject SplashPrefab;
+
+
 
     // Use this for initialization
     private static SkinResources _instance;

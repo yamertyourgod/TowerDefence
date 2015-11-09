@@ -21,6 +21,24 @@ public static class Skin
             case GamePrefabs.Mage:
                 go = SkinResources.MagePrefab;
                 break;
+            case GamePrefabs.SimpleTower:
+                go = SkinResources.SimpleTowerPrefab;
+                break;
+            case GamePrefabs.SplashTower:
+                go = SkinResources.SplashTowerPrefab;
+                break;
+            case GamePrefabs.FrozenTower:
+                go = SkinResources.FrozenTowerPrefab;
+                break;
+            case GamePrefabs.Bullet:
+                go = SkinResources.BulletPrefab;
+                break;
+            case GamePrefabs.Freeze:
+                go = SkinResources.FreezePrefab;
+                break;
+            case GamePrefabs.Splash:
+                go = SkinResources.SplashPrefab;
+                break;
         }
         return go;
     }
@@ -29,6 +47,13 @@ public static class Skin
         Cell,
         Zombie,
         Minotaur,
-        Mage
+        Mage,
+        SimpleTower,
+        SplashTower,
+        FrozenTower,
+        Bullet,
+        Freeze,
+        Splash
+
     }
 }

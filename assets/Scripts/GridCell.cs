@@ -65,7 +65,11 @@ public class GridCell : MonoBehaviour
 
     private void OnClick()
     {
-        Debug.Log("Click");
+        if (State == EnumCellState.Buildable)
+        {
+            GameController.BuildTower(transform.position);
+            GameController.ShowMap(false);
+        }
     }
 
     public enum EnumCellState

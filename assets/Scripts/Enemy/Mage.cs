@@ -10,11 +10,17 @@ public class Mage : Enemy
         Health = 85;
         Mana = 50;
         Speed = 20f;
+        CoolDown = 5f;
     }
 
-    protected override void GetEffect()
+    protected override void GetEffect(string effect)
     {
-        
+        switch (effect)
+        {
+            case "freeze":
+                Freeze();
+                break;
+        }
     }
 
     protected override void SelfUpdate()
@@ -32,6 +38,9 @@ public class Mage : Enemy
 
     public override void Die()
     {
+        iTween.Stop(EnemyGO);
+        var timer = Timer.AddTimer(1f);
+        timer.Done += () => { Destroy(EnemyGO); };
 
     }
 
@@ -44,21 +53,41 @@ public class Mage : Enemy
 
     protected override void GetDamage()
     {
-        Health -= 5;
+        Health -= 10;
         Debug.Log("Health = "+Health);
     }
 
     protected override void Cast(Action action)
     {
-        action.Invoke();
+        if (CanCast)
+        {
+            action.Invoke();
+            var timer = Timer.AddTimer(CoolDown);
+            timer.Done += () => { CanCast = true; };
+        }
+
     }
 
     protected void Heal()
     {
-        Mana -= 15;
-        Health += 40;
-        Debug.Log("Health "+Health+";"+" Mana "+Mana);
+        if (Mana > 15)
+        {
+            Mana -= 15;
+            Health += 40;
+            Debug.Log("Health " + Health + ";" + " Mana " + Mana);
+        }
     }
 
-    
+    protected void Freeze()
+    {
+        var tween = EnemyGO.GetComponent<iTween>();
+        tween.isRunning = false;
+        var timer = Timer.AddTimer(3);
+        timer.Done += () =>
+        {
+            tween.isRunning = true;
+        };
+    }
+
+
 }

@@ -7,6 +7,7 @@ public class CollisionDetector : MonoBehaviour
     public delegate void HitDelegate(Collider col);
     public delegate void UpdateDelegate();
     public event HitDelegate Hit;
+    public event HitDelegate Exit;
     public event UpdateDelegate UpdateEvent;
 	// Use this for initialization
 	void Start () {
@@ -22,5 +23,10 @@ public class CollisionDetector : MonoBehaviour
     void OnTriggerEnter(Collider obj)
     {
         if (Hit != null) Hit(obj);
+    }
+
+    void OnTriggerExit(Collider obj)
+    {
+        if (Exit != null) Exit(obj);
     }
 }

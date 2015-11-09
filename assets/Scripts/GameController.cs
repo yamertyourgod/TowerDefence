@@ -9,14 +9,16 @@ public class GameController : MonoBehaviour
     public GameObject Spawn;
     public GameObject End;
     private static GameController _instance;
-
-	// Use this for initialization
+    public static Towers CurrentTowerType;
+    private static GameObject _map;
+    // Use this for initialization
 	void Start ()
 	{
 	    if (_instance != null)
 	        return;
 	    _instance = this;
-        GameObject.Find("Map").SetActive(false);
+        _map = GameObject.Find("Map");
+	    ShowMap(false);
 	}
 	
 	// Update is called once per frame
@@ -38,10 +40,20 @@ public class GameController : MonoBehaviour
             var mage = new Mage();
             mage.Summon();
         }
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.B))
         {
-           var timer = Timer.AddTimer(2);
-            timer.Done += () => { Debug.Log("Done"); };
+            var tower = new SimpleTower();
+            tower.Build(new Vector3(-39,3,92));
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            var tower = new FrozenTower();
+            tower.Build(new Vector3(-39, 3, 92));
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            var tower = new FrozenTower();
+            tower.Build(new Vector3(-39, 3, 92));
         }
     }
 
@@ -50,5 +62,35 @@ public class GameController : MonoBehaviour
         return _instance;
     }
 
+    public static void BuildTower(Vector3 buildPos)
+    {
+        switch (CurrentTowerType)
+        {
+            case Towers.Simple:
+                var simple = new SimpleTower();
+                simple.Build(buildPos);
+                break;
+            case Towers.Splash:
+                var splash = new SplashTower();
+                splash.Build(buildPos);
+                break;
+            case Towers.Frozen:
+                var frozen = new FrozenTower();
+                frozen.Build(buildPos);
+                break;
+        }
+    }
+
+    public static void ShowMap(bool show)
+    {
+        _map.SetActive(show);
+    }
+
+    public enum Towers
+    {
+        Simple,
+        Splash,
+        Frozen
+    }
 
 }

@@ -11,9 +11,14 @@ public class Zombie : Enemy {
         Health = 20;
     }
 
-    protected override void GetEffect()
+    protected override void GetEffect(string effect)
     {
-        
+        switch (effect)
+        {
+            case "freeze":
+                Freeze();
+                break;
+        }
     }
 
     protected override void SelfUpdate()
@@ -28,7 +33,9 @@ public class Zombie : Enemy {
 
     override public void Die()
     {
-        
+        iTween.Stop(EnemyGO);
+        var timer = Timer.AddTimer(1f);
+        timer.Done += () => { Destroy(EnemyGO); };
     }
 
     override protected void GetGO()
@@ -40,13 +47,22 @@ public class Zombie : Enemy {
 
     protected override void GetDamage()
     {
-        Debug.Log("GetDamage");
+        Health -= 10;
     }
 
-
+    protected void Freeze()
+    {
+        var tween = EnemyGO.GetComponent<iTween>();
+        tween.isRunning = false;
+        var timer = Timer.AddTimer(3);
+        timer.Done += () =>
+        {
+            tween.isRunning = true;
+        };
+    }
 
     protected override void Cast(Action action)
     {
-        throw new NotImplementedException();
+       action.Invoke();
     }
 }
