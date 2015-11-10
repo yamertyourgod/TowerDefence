@@ -7,8 +7,9 @@ public class Zombie : Enemy {
 	// Use this for initialization
     public Zombie()
     {
-        Speed = 20f;
-        Health = 20;
+        Cost = Controller.ZombieCost;
+        Speed = Controller.ZombieSpeed;
+        Health = Controller.ZombieHealth;
     }
 
     protected override void GetEffect(string effect)
@@ -54,10 +55,14 @@ public class Zombie : Enemy {
     {
         var tween = EnemyGO.GetComponent<iTween>();
         tween.isRunning = false;
+        var freezeEffectprefab = Skin.GetPrefab(Skin.GamePrefabs.FreezEffect);
+        var effect = Instantiate(freezeEffectprefab, EnemyGO.transform.position, freezeEffectprefab.transform.rotation) as GameObject;
+        effect.transform.SetParent(EnemyGO.transform);
         var timer = Timer.AddTimer(3);
         timer.Done += () =>
         {
             tween.isRunning = true;
+            Destroy(effect);
         };
     }
 

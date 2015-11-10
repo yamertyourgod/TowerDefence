@@ -7,8 +7,9 @@ public class Minotaur : Enemy {
 	// Use this for initialization
     public Minotaur()
     {
-        Speed = 45f;
-        Health = 85;
+        Cost = Controller.MinotaurCost;
+        Speed = Controller.MinotaurSpeed;
+        Health = Controller.MinotaurHealth;
         
     }
 
@@ -63,10 +64,14 @@ public class Minotaur : Enemy {
     {
         var tween = EnemyGO.GetComponent<iTween>();
         tween.isRunning = false;
+        var freezeEffectprefab = Skin.GetPrefab(Skin.GamePrefabs.FreezEffect);
+        var effect = Instantiate(freezeEffectprefab, EnemyGO.transform.position, freezeEffectprefab.transform.rotation) as GameObject;
+        effect.transform.SetParent(EnemyGO.transform);
         var timer = Timer.AddTimer(3);
         timer.Done += () =>
         {
             tween.isRunning = true;
+            Destroy(effect);
         };
     }
 }

@@ -7,9 +7,10 @@ public class SimpleTower : Tower {
 
     public SimpleTower()
     {
-        ReloadTime = 0.5f;
-        CanonSpeed = 250;
-        Radius = 7;
+        Cost = Controller.SimpleTowerCost;
+        ReloadTime = Controller.SimpleTowerReloadTime;
+        CanonSpeed = Controller.SimpleTowerCanonSpeed;
+        Radius = Controller.SimpleTowerRadius;
     }
     protected override void Shoot(GameObject go)
     {
@@ -20,9 +21,9 @@ public class SimpleTower : Tower {
             reloadTimer.Done += () => { CanShoot = true; };
             var prefab = Skin.GetPrefab(Skin.GamePrefabs.Bullet);
             var bullet = Instantiate(prefab, TowerGO.transform.position, prefab.transform.rotation) as GameObject;
-            var destroyTimer = Timer.AddTimer(5f);
-            destroyTimer.Done += () => { if (bullet != null) Destroy(bullet); };
             iTween.MoveTo(bullet, iTween.Hash("position", go.transform.position, "speed", CanonSpeed, "easetype", iTween.EaseType.linear));
+            var destroyTimer = Timer.AddTimer(bullet.GetComponent<iTween>().time);
+            destroyTimer.Done += () => { if (bullet != null) Destroy(bullet); };
         }
 
     }

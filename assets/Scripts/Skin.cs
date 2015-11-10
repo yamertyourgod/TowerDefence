@@ -42,6 +42,18 @@ public static class Skin
             case GamePrefabs.Healthbar:
                 go = SkinResources.HealthbarPrefab;
                 break;
+            case GamePrefabs.Manabar:
+                go = SkinResources.ManabarPrefab;
+                break;
+            case GamePrefabs.HealingEffect:
+                go = SkinResources.HealingEffectPrefab;
+                break;
+            case GamePrefabs.FreezEffect:
+                go = SkinResources.FreezEffectPrefab;
+                break;
+            case GamePrefabs.EnemyDropCost:
+                go = SkinResources.EnemyDropCostPrefab;
+                break;
         }
         return go;
     }
@@ -57,7 +69,11 @@ public static class Skin
         Bullet,
         Freeze,
         Splash,
-        Healthbar
+        Healthbar,
+        Manabar,
+        HealingEffect,
+        FreezEffect,
+        EnemyDropCost
 
     }
 }

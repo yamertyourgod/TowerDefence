@@ -8,14 +8,11 @@ public class GridCell : MonoBehaviour
     private GridCell _script;
     
     public bool Busy;
-    //private SpriteRenderer _spriteRenderer;
-    //private Sprite _normalSprite;
-    //public Sprite HighlitedSprite;
-    //private bool _isHighlited;
     public GameObject GO;
     public EnumCellState State;
     public bool Selected;
     public Color OriginalColor;
+    public EnumCellState OriginalState;
 
     void Start()
     {
@@ -31,6 +28,7 @@ public class GridCell : MonoBehaviour
         _script.GO = GO;
         _script.OriginalColor = OriginalColor;
         _script.State = State;
+        OriginalState = State;
 
     }
 
@@ -69,6 +67,8 @@ public class GridCell : MonoBehaviour
         {
             GameController.BuildTower(transform.position);
             GameController.ShowMap(false);
+            State = EnumCellState.Blocked;
+            GameController.GetInstance().ChangedCells.Add(this);
         }
     }
 

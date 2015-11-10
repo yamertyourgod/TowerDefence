@@ -3,13 +3,14 @@ using System.Collections;
 
 public class FrozenTower : SplashTower {
 
-    public float SplashRadius;
+
     public FrozenTower()
     {
-        ReloadTime = 5f;
-        CanonSpeed = 250;
-        SplashRadius = 200;
-        Radius = 8;
+        Cost = Controller.FrozenTowerCost;
+        ReloadTime = Controller.FrozenTowerReloadTime;
+        CanonSpeed = Controller.FrozenTowerCanonSpeed;
+        SplashRadius = Controller.SplashRadius;
+        Radius = Controller.FrozenTowerRadius;
     }
     protected override void Shoot(GameObject go)
     {

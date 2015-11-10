@@ -14,6 +14,10 @@ public class SkinResources : MonoBehaviour
     public GameObject FreezePrefab;
     public GameObject SplashPrefab;
     public GameObject HealthbarPrefab;
+    public GameObject ManabarPrefab;
+    public GameObject HealingEffectPrefab;
+    public GameObject FreezEffectPrefab;
+    public GameObject EnemyDropCostPrefab;
 
 
 

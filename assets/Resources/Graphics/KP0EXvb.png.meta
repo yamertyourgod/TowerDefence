@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: ce6dd275fcf15ef438c483227eb791ce
+timeCreated: 1447168842
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: KP0EXvb_0
+    21300002: KP0EXvb_1
+    21300004: KP0EXvb_2
+    21300006: KP0EXvb_3
+    21300008: KP0EXvb_4
+    21300010: KP0EXvb_5
+    21300012: KP0EXvb_6
+    21300014: KP0EXvb_7
+    21300016: KP0EXvb_8
+    21300018: KP0EXvb_9
+    21300020: KP0EXvb_10
+    21300022: KP0EXvb_11
+    21300024: KP0EXvb_12
+    21300026: KP0EXvb_13
+    21300028: KP0EXvb_14
+    21300030: KP0EXvb_15
+    21300032: KP0EXvb_16
+    21300034: KP0EXvb_17
+    21300036: KP0EXvb_18
+    21300038: KP0EXvb_19
+    21300040: KP0EXvb_20
+    21300042: KP0EXvb_21
+    21300044: KP0EXvb_22
+    21300046: KP0EXvb_23
+    21300048: KP0EXvb_24
+    21300050: KP0EXvb_25
+    21300052: KP0EXvb_26
+    21300054: KP0EXvb_27
+    21300056: KP0EXvb_28
+    21300058: KP0EXvb_29
+    21300060: KP0EXvb_30
+    21300062: KP0EXvb_31
+    21300064: KP0EXvb_32
+    21300066: KP0EXvb_33
+    21300068: KP0EXvb_34
+    21300070: KP0EXvb_35
+    21300072: KP0EXvb_36
+    21300074: KP0EXvb_37
+    21300076: KP0EXvb_38
+    21300078: KP0EXvb_39
+    21300080: KP0EXvb_40
+    21300082: KP0EXvb_41
+    21300084: KP0EXvb_42
+    21300086: KP0EXvb_43
+    21300088: KP0EXvb_44
+    21300090: KP0EXvb_45
+    21300092: KP0EXvb_46
+    21300094: KP0EXvb_47
+    21300096: KP0EXvb_48
+    21300098: KP0EXvb_49
+    21300100: KP0EXvb_50
+    21300102: KP0EXvb_51
+    21300104: KP0EXvb_52
+    21300106: KP0EXvb_53
+    21300108: KP0EXvb_54
+    21300110: KP0EXvb_55
+    21300112: KP0EXvb_56
+    21300114: KP0EXvb_57
+    21300116: KP0EXvb_58
+    21300118: KP0EXvb_59
+    21300120: KP0EXvb_60
+    21300122: KP0EXvb_61
+    21300124: KP0EXvb_62
+    21300126: KP0EXvb_63
+    21300128: KP0EXvb_64
+    21300130: KP0EXvb_65
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: KP0EXvb_29
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 180
+        width: 77
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_30
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 180
+        width: 72
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_39
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 164
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_40
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 163
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_41
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 164
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_42
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 163
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_43
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 82
+        width: 64
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_48
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 82
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_51
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 74
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_52
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 74
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_53
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 74
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_54
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 74
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KP0EXvb_0
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 87
+        width: 65
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

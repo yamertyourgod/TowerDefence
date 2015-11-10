@@ -7,10 +7,11 @@ public class SplashTower : Tower
     public float SplashRadius;
     public SplashTower()
     {
-        ReloadTime = 5f;
-        CanonSpeed = 250;
-        SplashRadius = 200;
-        Radius = 7;
+        Cost = Controller.SplashTowerCost;
+        ReloadTime = Controller.SplashTowerReloadTime;
+        CanonSpeed = Controller.SplashTowerCanonSpeed;
+        SplashRadius = Controller.SplashRadius;
+        Radius = Controller.SplashTowerRadius;
     }
     protected override void Shoot(GameObject go)
     {
