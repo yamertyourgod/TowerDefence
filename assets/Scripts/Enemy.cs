@@ -54,11 +54,12 @@ public abstract class Enemy : MonoBehaviour
         }
         if (col.tag == "freeze")
         {
-            GetEffect(col.tag);
+            GetEffect("freeze");
         }
         if (col.tag == "splash")
         {
             GetDamage();
+            GetEffect("splash");
         }
     }
     private void AddHealthbar()

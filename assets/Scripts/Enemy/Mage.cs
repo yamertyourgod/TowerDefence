@@ -28,6 +28,9 @@ public class Mage : Enemy
             case "freeze":
                 Freeze();
                 break;
+            case "splash":
+                Burning();
+                break;
         }
     }
 
@@ -129,6 +132,17 @@ public class Mage : Enemy
         timer.Done += () =>
         {
             tween.isRunning = true;
+            Destroy(effect);
+        };
+    }
+    protected void Burning()
+    {
+        var burningEffectprefab = Skin.GetPrefab(Skin.GamePrefabs.FireEffect);
+        var effect = Instantiate(burningEffectprefab, EnemyGO.transform.position, burningEffectprefab.transform.rotation) as GameObject;
+        effect.transform.SetParent(EnemyGO.transform);
+        var timer = Timer.AddTimer(3);
+        timer.Done += () =>
+        {
             Destroy(effect);
         };
     }

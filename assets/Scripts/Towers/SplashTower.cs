@@ -22,7 +22,7 @@ public class SplashTower : Tower
             reloadTimer.Done += () => { CanShoot = true; };
             var prefab = Skin.GetPrefab(Skin.GamePrefabs.Splash);
             var bullet = Instantiate(prefab, TowerGO.transform.position, prefab.transform.rotation) as GameObject;
-            var destroyTimer = Timer.AddTimer(1f);
+            var destroyTimer = Timer.AddTimer(2f);
             destroyTimer.Done += () => { if (bullet != null) Destroy(bullet); };
             iTween.MoveTo(bullet, iTween.Hash("position", go.transform.position, "speed", CanonSpeed, "easetype", iTween.EaseType.linear));
             var splashTime = bullet.GetComponent<iTween>().time;

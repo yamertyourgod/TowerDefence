@@ -15,6 +15,8 @@ public class GUI : MonoBehaviour
     public Text GoldText;
     public Text KilledEnemies;
     private GameController _controller;
+    private Text _startWaveText;
+
     // Use this for initialization
     public void StartGui()
     {
@@ -26,7 +28,8 @@ public class GUI : MonoBehaviour
         SplashTower.GetComponentInChildren<Text>().text = "Build Splash Tower "+ _controller.SplashTowerCost + " gold";
         FrozenTower.GetComponentInChildren<Text>().text = "Build Frozen Tower "+ _controller.FrozenTowerCost + " gold";
         StartWaveButton.onClick.AddListener(StartWave);
-        StartWaveButton.GetComponentInChildren<Text>().text = "Start new wave: " + _controller.EnemiesInWave + " enemies";
+        _startWaveText = StartWaveButton.GetComponentInChildren<Text>();
+        _startWaveText.text = "Start new wave: " + _controller.EnemiesInWave + " enemies";
         StartGameButon.onClick.AddListener(StartGame);
     }
 
@@ -39,7 +42,7 @@ public class GUI : MonoBehaviour
     {
         _controller.CreateWave();
         _controller.StartWave();
-        StartWaveButton.GetComponentInChildren<Text>().text = "Start new wave: " + _controller.EnemiesInWave + " enemies";
+       
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class GUI : MonoBehaviour
         {
             GoldText.text = "Gold: " + _controller.Gold;
             KilledEnemies.text = "Killed: " + _controller.KilledEnemies;
+            _startWaveText.text = "Start new wave: " + _controller.EnemiesInWave + " enemies";
         }
     }
 

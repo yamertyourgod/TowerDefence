@@ -54,6 +54,9 @@ public static class Skin
             case GamePrefabs.EnemyDropCost:
                 go = SkinResources.EnemyDropCostPrefab;
                 break;
+            case GamePrefabs.FireEffect:
+                go = SkinResources.FireEffectPrefab;
+                break;
         }
         return go;
     }
@@ -73,6 +76,7 @@ public static class Skin
         Manabar,
         HealingEffect,
         FreezEffect,
+        FireEffect,
         EnemyDropCost
 
     }
