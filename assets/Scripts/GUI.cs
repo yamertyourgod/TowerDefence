@@ -14,6 +14,7 @@ public class GUI : MonoBehaviour
     public GameObject GameOverScreen;
     public Text GoldText;
     public Text KilledEnemies;
+    public Text ResultText;
     private GameController _controller;
     private Text _startWaveText;
 
@@ -86,6 +87,8 @@ public class GUI : MonoBehaviour
                 PlayScreen.SetActive(true);
                 break;
             case GameScreens.GameOverScreen:
+                var enemiesCount = _controller.KilledEnemies;
+                ResultText.text = "Result: "+enemiesCount;
                 GameOverScreen.SetActive(true);
                 break;
         }

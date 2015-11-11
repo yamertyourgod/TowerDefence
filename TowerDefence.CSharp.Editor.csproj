@@ -113,10 +113,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="TowerDefence.CSharp.Plugins.csproj">
-      <Project>{5C7B8E96-73C0-AEF7-841D-907835559854}</Project>
-      <Name>TowerDefence.CSharp.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="TowerDefence.CSharp.csproj">
       <Project>{F9D93AC0-8B84-22C9-A7B7-09978B132B87}</Project>
       <Name>TowerDefence.CSharp</Name>
@@ -125,12 +121,6 @@
   <ItemGroup>
     <Compile Include="assets\editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
     <Compile Include="assets\editor\MapCreatorEditor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\standard assets\characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-    <None Include="assets\standard assets\characters\rollerball\RollerBallGuidelines.txt" />
-    <None Include="assets\standard assets\characters\thirdpersoncharacter\ThirdPersonCharacterGuidelines.txt" />
-    <None Include="assets\standard assets\crossplatforminput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
